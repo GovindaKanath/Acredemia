@@ -1,0 +1,38 @@
+{
+  "name": "DIDI-Middleware",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GovindaKanath/FUNDaily-Backend.git",
+  "author": "emilson rodriguez <emilson.rodriguez.freelance@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "express": "^4.17.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "id:list": "ts-node ./src/list-identifier",
+    "id:create": "ts-node ./src/create-identifier",
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
+  },
+  "dependencies": {
+    "@types/node": "^16.0.0",
+    "@veramo/core": "^1.2.0",
+    "@veramo/credential-w3c": "^1.2.0",
+    "@veramo/data-store": "^1.2.0",
+    "@veramo/did-manager": "^1.2.0",
+    "@veramo/did-provider-ethr": "^1.2.0",
+    "@veramo/did-provider-web": "^1.2.0",
+    "@veramo/did-resolver": "^1.2.0",
+    "@veramo/key-manager": "^1.2.0",
+    "@veramo/kms-local": "^1.2.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^3.5.1",
+    "ethr-did-resolver": "^4.3.4",
+    "sqlite3": "^5.0.2",
+    "web-did-resolver": "^2.0.4"
+  }
+}
